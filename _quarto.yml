@@ -3,7 +3,7 @@ project:
 
 website:
   title: "web"
-  navbar:
+  navbar: 
     left:
       - href: index.qmd
         text: Home
@@ -14,9 +14,8 @@ format:
     theme:
       - cosmo
       - brand
-    css: styles.css　
+    css: styles.css
     toc: true
 
-　
 
 
