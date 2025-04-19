@@ -11,10 +11,6 @@
     "href": "index.html",
     "title": "web",
     "section": "",
-<<<<<<< HEAD
-    "text": "This is a Quarto website.AAA\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-=======
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
->>>>>>> be5cf87b083357a07ecf5b99376c038a0e85a1d8
+    "text": "This is a Quarto website.AAAA\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]
