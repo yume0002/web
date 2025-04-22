@@ -4,29 +4,39 @@
     backdrop-filter: blur(10px); /* 背景をぼかす */
   }
   
- /* ドロワーメニュー全体を半透明にし、全画面に広げる */
+/* ナビ開いたときに全体を暗く・ぼかす */
+.sidebar,
+#quarto-margin-sidebar {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(8px);
+  width: 100vw !important;
+  height: 100vh !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* メニュー項目を中央寄せに */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* 各リンクのスタイルを調整 */
+.sidebar .nav-item,
+.sidebar .nav-link {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  color: white !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ハンバーガーが押された時の transition（ふわっと出す） */
 .sidebar {
-    background-color: rgba(0, 0, 0, 0.6) !important;
-    backdrop-filter: blur(8px);
-    width: 100vw !important;
-    height: 100vh !important;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  
-  /* メニューのテキストを中央揃え＆間隔調整 */
-  .sidebar-item {
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    padding: 1rem;
-  }
-  
-  /* クローズボタンも目立たせる */
-  .sidebar-toggle {
-    color: white !important;
-    font-size: 2rem;
-  }
+  transition: all 0.3s ease-in-out;
+}
