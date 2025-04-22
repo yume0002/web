@@ -40,7 +40,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(173, 216, 230, 0.7);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(10px);
   z-index: -1;
 }
 
