@@ -25,8 +25,12 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 51, 102, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* 展開メニュー全体を中央揃え */
+/* モバイル表示時のハンバーガーメニュー全体を中央に配置 */
 .navbar-collapse.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* 中央揃え */
   position: fixed;
   top: 0;
   left: 0;
@@ -35,18 +39,15 @@
   background-color: rgba(173, 216, 230, 0.95) !important;
   backdrop-filter: blur(10px);
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-top: 4rem;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 /* メニュー内のリンク */
 .navbar-collapse .nav-link {
   color: #003366 !important;
-  font-size: 1.1rem;         /* 少し小さめに */
+  font-size: 1.1rem;
+  font-weight: 600;
   text-align: center;
-  margin: 0.2rem;
+  width: 100%;
 }
