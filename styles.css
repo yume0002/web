@@ -1,1 +1,52 @@
-/* css styles */
+/* === ナビゲーションバー全体の背景色と透明感 === */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6) !important;  /* 半透明の黒 */
+    backdrop-filter: blur(10px); /* 背景をぼかす */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 薄いボーダー */
+  }
+  
+  /* === ナビバー内のロゴやリンク（文字）色 === */
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: white !important;  /* 白い文字 */
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ffcc00 !important; /* ホバー時に黄色に変化 */
+  }
+  
+  /* === ハンバーガーメニューアイコン（スマホ表示時） === */
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* === スクロール時にナビバー固定するための影 === */
+  .headroom--not-top .navbar {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  /* ハンバーガーメニューを開いたときに背景を半透明にするオーバーレイ */
+.navbar-collapse.show::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);  /* 半透明の黒 */
+    backdrop-filter: blur(8px);            /* 背景ぼかし */
+    z-index: -1;  /* メニューより後ろに表示 */
+  }
+
+  .navbar {
+    background-color: #222 !important;
+  }
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: #fff !important;
+  }

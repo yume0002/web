@@ -3,20 +3,25 @@ project:
   output-dir: docs
 
 website:
-  title: "web"
+  title: "Name"  # ← ここがサイト上部の "web" を "Name" に変える
   navbar: 
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - href: teaching.qmd
+        text: Teaching
 
 format:
   html:
     theme:
-      - cosmo
+      - cosno
       - brand
     css: styles.css
     toc: true
-
-
-
+    
+navbar:
+  right:
+    - icon: github
+      href: https://github.com/yume0002
