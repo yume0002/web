@@ -24,13 +24,12 @@
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 51, 102, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-
-/* モバイル表示時のハンバーガーメニュー全体を中央に配置 */
+/* ハンバーガーメニュー展開時の全体設定 */
 .navbar-collapse.show {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* 中央揃え */
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -43,11 +42,18 @@
   gap: 1.2rem;
 }
 
-/* メニュー内のリンク */
-.navbar-collapse .nav-link {
-  color: #003366 !important;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: center;
+/* navリスト自体を中央寄せ */
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+}
+
+/* 各リンクを中央に */
+.navbar-collapse .nav-link {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #003366 !important;
+  font-weight: 600;
 }
