@@ -2,6 +2,13 @@
   {
     "objectID": "about.html",
     "href": "about.html",
+    "title": "Profile",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
     "title": "Teaching",
     "section": "",
     "text": "About this site"
