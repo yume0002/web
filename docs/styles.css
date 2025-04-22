@@ -1,21 +1,34 @@
-/* css styles */
-/* ハンバーガーメニュー開いたとき全体を覆う */
-.navbar-collapse {
-    background-color: #1a1a1a;
-    position: fixed;
-    top: 56px; /* ナビバーの高さ */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    z-index: 1000;
-    overflow-y: auto;
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+      background-color: #1a1a1a !important;
+      position: fixed;
+      top: 56px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1050;
+      padding-top: 2rem;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-nav {
+      width: 100%;
+    }
+  
+    .navbar-nav .nav-link {
+      color: #ffffff !important;
+      font-size: 1.5rem; /* モバイルだけ大きく */
+      margin: 1rem 0;
+      text-align: center;
+    }
   }
   
-  /* メニュー項目のスタイルを中央・大きく */
-  .navbar-nav .nav-link {
-    color: white !important;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
+  /* PCではフォントサイズを標準に */
+  @media (min-width: 992px) {
+    .navbar-nav .nav-link {
+      font-size: 1rem;
+      margin: 0 1rem;
+    }
   }
