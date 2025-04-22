@@ -4,21 +4,29 @@
     backdrop-filter: blur(10px); /* 背景をぼかす */
   }
   
-  /* ドロワー（モバイル時のメニュー）も半透明に */
-  .sidebar {
+ /* ドロワーメニュー全体を半透明にし、全画面に広げる */
+.sidebar {
     background-color: rgba(0, 0, 0, 0.6) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
   
-  /* ナビゲーションテキストを中央揃え */
-  .navbar-nav {
-    text-align: center;
-    width: 100%;
-  }
-  
-  /* モバイル用メニューの項目を中央揃えに */
+  /* メニューのテキストを中央揃え＆間隔調整 */
   .sidebar-item {
     text-align: center;
     font-weight: 600;
+    font-size: 1.3rem;
     letter-spacing: 1px;
+    padding: 1rem;
+  }
+  
+  /* クローズボタンも目立たせる */
+  .sidebar-toggle {
+    color: white !important;
+    font-size: 2rem;
   }
