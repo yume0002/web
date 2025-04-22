@@ -1,1 +1,21 @@
 /* css styles */
+/* ハンバーガーメニュー開いたとき全体を覆う */
+.navbar-collapse {
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 56px; /* ナビバーの高さ */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  /* メニュー項目のスタイルを中央・大きく */
+  .navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
