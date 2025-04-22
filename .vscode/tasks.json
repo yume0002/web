@@ -1,20 +1,23 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-      {
-        "label": "Quarto Render + Git Push",
-        "type": "shell",
-        "command": "quarto render && git add index.qmd about.qmd docs/ && git commit -m \"Auto update via VS Code task\" && git push origin main",
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        },
-        "presentation": {
-          "reveal": "always"
-        },
-        "problemMatcher": []
-      }
-    ]
-  }
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Quarto Render and Push to GitHub",
+      "type": "shell",
+      "command": "quarto render && git add . && git commit -m \"Auto update\" && git push origin main",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+    
+  ]
   
-  
+}
