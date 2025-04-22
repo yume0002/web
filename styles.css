@@ -1,37 +1,37 @@
-/* === ナビゲーションバー全体の背景色と透明感（明るめ） === */
+/* === ナビゲーションバー全体の背景色と透明感 === */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.8) !important;  /* 半透明の白 */
-  backdrop-filter: blur(10px); /* 背景ぼかし */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* 薄いボーダー */
+  background-color: rgba(173, 216, 230, 0.8) !important;  /* 明るい青 (ライトブルー) */
+  backdrop-filter: blur(10px); /* 背景をぼかす */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* === ナビバー内のロゴやリンクの色 === */
+/* === ナビバー内のロゴやリンク（文字）色 === */
 .navbar .navbar-brand,
 .navbar .nav-link {
-  color: #333 !important;  /* 濃いグレー */
-  font-weight: 500;
+  color: #003366 !important;  /* 濃い青 */
+  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .navbar .nav-link:hover {
-  color: #0066cc !important; /* ホバー時に青系に変化 */
+  color: #0055aa !important; /* ホバー時にやや明るい青 */
 }
 
 /* === ハンバーガーメニューアイコン === */
 .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 51, 102, 0.5);
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 51, 102, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* === スクロール時の影 === */
+.headroom--not-top .navbar {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 /* === ハンバーガーメニュー展開時の背景 === */
-.navbar-collapse {
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: blur(12px) !important;
-}
-
 .navbar-collapse.show::before {
   content: "";
   position: fixed;
@@ -39,7 +39,12 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
+  background-color: rgba(173, 216, 230, 0.7);
+  backdrop-filter: blur(6px);
   z-index: -1;
+}
+
+.navbar-collapse {
+  background-color: rgba(173, 216, 230, 0.85) !important;
+  backdrop-filter: blur(8px);
 }
