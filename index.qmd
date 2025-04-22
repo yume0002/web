@@ -1,8 +1,7 @@
-website:
-  title: "web"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
+---
+title: "Name"
+---
+
+This is a Quarto website.AAAAAAAAAAAAAAAAAAAAAAa
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
