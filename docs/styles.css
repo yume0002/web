@@ -37,7 +37,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 1000vh;
+    height: 1vh;
     background-color: rgba(0, 0, 0, 0.5);  /* 半透明の黒 */
     backdrop-filter: blur(8px);            /* 背景ぼかし */
     z-index: -1;  /* メニューより後ろに表示 */
