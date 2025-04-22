@@ -2,6 +2,6 @@
 title: "Name"
 ---
 
-This is a Quarto website.AAAAAA
+Welcome to my site.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
