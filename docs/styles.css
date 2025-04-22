@@ -1,42 +1,22 @@
-/* ナビゲーションバーの背景を半透明に */
-.navbar {
-    background-color: rgba(0, 0, 0, 0.6) !important;
+/* Quarto のナビオーバーレイ背景をぼかして半透明にする */
+.quarto-sidebar-toggle-open body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* 半透明の黒 */
     backdrop-filter: blur(10px); /* 背景をぼかす */
+    z-index: 998;
   }
   
-/* ナビ開いたときに全体を暗く・ぼかす */
-.sidebar,
-#quarto-margin-sidebar {
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  backdrop-filter: blur(8px);
-  width: 100vw !important;
-  height: 100vh !important;
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-/* メニュー項目を中央寄せに */
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-/* 各リンクのスタイルを調整 */
-.sidebar .nav-item,
-.sidebar .nav-link {
-  font-size: 1.4rem;
-  margin: 1rem 0;
-  color: white !important;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* ハンバーガーが押された時の transition（ふわっと出す） */
-.sidebar {
-  transition: all 0.3s ease-in-out;
-}
+  /* 実際のメニュー（サイドナビ）をより中央寄せ・透明感 */
+  .quarto-sidebar-toggle-open .sidebar-navigation {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(6px);
+  }
+  
+  /* メニュー項目の文字を調整（好みに応じて） */
+  .sidebar-navigation .nav-link {
+    font-size: 1.2rem;
+    color: white !important;
+    text-align: center;
+  }
