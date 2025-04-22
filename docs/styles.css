@@ -1,27 +1,24 @@
-/* ナビバー全体に半透明の背景 */
+/* ナビゲーションバーの背景を半透明に */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.6) !important; /* 透明感のある黒 */
-    backdrop-filter: blur(10px); /* 背景をぼかすことでガラス風 */
-    -webkit-backdrop-filter: blur(10px); /* Safari対応 */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(10px); /* 背景をぼかす */
   }
   
-  /* ナビ内のリンクを明るくして視認性アップ */
-  .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.9) !important;
-    font-weight: 500;
+  /* ドロワー（モバイル時のメニュー）も半透明に */
+  .sidebar {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(10px);
   }
   
-  /* ホバー時のエフェクト */
-  .navbar-nav .nav-link:hover {
-    color: #ffffff !important;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+  /* ナビゲーションテキストを中央揃え */
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
   }
   
-  /* サイトタイトルも透明感を出す */
-  .navbar-brand {
-    color: rgba(255, 255, 255, 0.95) !important;
-    font-weight: bold;
-    font-size: 1.3rem;
+  /* モバイル用メニューの項目を中央揃えに */
+  .sidebar-item {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
